@@ -1,9 +1,17 @@
 import request from '@/utils/HttpUtil/http'
 
-export function getList(params) {
+export function getList(url,params) {
   return request(
-    '/vue-admin-template/table/list',
+    url,
     'get',
     params
+  )
+}
+
+export function insertData(url,data) {
+  return request(
+    url,
+    'post',
+    data
   )
 }

@@ -1,3 +1,10 @@
+/*
+ * @Author: RL
+ * @Date: 2022-08-05 11:30:43
+ * @LastEditors: RL
+ * @LastEditTime: 2022-08-08 15:34:19
+ * @Description: 请填写简介
+ */
 import Vue from 'vue'
 
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
@@ -29,9 +36,9 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // set ElementUI lang to EN
-Vue.use(ElementUI, { locale })
+// Vue.use(ElementUI, { locale })
 // 如果想要中文版 element-ui，按如下方式声明
-// Vue.use(ElementUI)
+Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 

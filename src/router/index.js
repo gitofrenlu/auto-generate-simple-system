@@ -5,7 +5,7 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
-
+import tableGenerate from './tableGenerate'
 /**
  * Note: sub-menu only appear when route children.length >= 1
  * Detail see: https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -65,15 +65,18 @@ export const constantRoutes = [
       {
         path: 'table',
         name: 'Table',
+        hidden:false,
         component: () => import('@/views/table/index'),
         meta: { title: 'Table', icon: 'table' }
       },
       {
         path: 'tree',
         name: 'Tree',
+        hidden:true,
         component: () => import('@/views/tree/index'),
         meta: { title: 'Tree', icon: 'tree' }
-      }
+      },
+      ...tableGenerate
     ]
   },
 
@@ -84,6 +87,7 @@ export const constantRoutes = [
       {
         path: 'index',
         name: 'Form',
+        hidden:true,
         component: () => import('@/views/form/index'),
         meta: { title: '表单', icon: 'form' }
       }
